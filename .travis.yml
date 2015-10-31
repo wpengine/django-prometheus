@@ -19,7 +19,7 @@ install:
   - pip install -r requirements.txt
   - pip install -q Django==$DJANGO_VERSION
   - (cd tests/end2end && virtualenv env && source ./env/bin/activate && pip install -r requirements.txt && pip install Django==$DJANGO_VERSION && cd ../../ && python setup.py install)
-before_script: pep8 .
+before_script: pep8 --exclude env .
 script:
   - python setup.py test
   - (cd tests/end2end && source ./env/bin/activate && python manage.py test)
