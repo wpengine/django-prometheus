@@ -1,4 +1,4 @@
-IMAGE=wpengine/microservice
+IMAGE=wpengine/django-prometheus-builder
 
 build:
 	@docker build . -t ${IMAGE}
