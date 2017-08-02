@@ -1,4 +1,5 @@
-IMAGE=wpengine/django-prometheus-builder
+BUILD_NUMBER ?= 0
+IMAGE=wpengine/django-prometheus-builder:${BUILD_NUMBER}
 
 build:
 	@docker build . -t ${IMAGE}
